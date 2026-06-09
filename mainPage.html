@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<style>
+    :root {
+        --title-size: 128px;
+    }
+    @media (max-width: 1000px){
+        :root {
+            --title-size: 64px;
+        }
+    }
+    
+    body {
+        margin: 0;
+    }
+
+    h1 {
+        background-color: black;
+        color: white;
+        padding-top: 100px;
+        margin: -25px;
+        font-size: var(--title-size);
+        font-family: Georgia;
+        text-align: center;
+    }
+
+    .main-container {
+        width: auto;
+        display: grid;
+        grid-template-areas: 
+        "head"
+        "body"
+        "footer";
+    }
+
+    .arts-container {
+        grid-area: body;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px 25px 25px 25px;
+        justify-content: center;
+    }
+    /*for grid only
+    .arts-container:has(.imgformat:nth-child(1):hover) {
+        flex-grow: 2;
+        
+    }*/
+
+    .imgformat {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 200px;
+        align-items: center;
+        transition: ease 0.5s;
+    }
+
+    .imgformat:hover {
+        flex: 2 1 200px;
+    }
+
+    .imgformat img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+
+    .imgformat span{
+        position: absolute;
+        z-index: 0;
+        color:white;
+        font-size: 15px;
+        font-family: fantasy;
+        white-space: nowrap;
+        filter: drop-shadow(0.5px 1px black)
+    }
+</style>
+<html>
+<head>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1 style="grid-area: head;">Artworks</h1>
+        <div class="arts-container">
+            <div class="imgformat">
+                <span>Art 1</span>
+                <img src="pictures/img1_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 2</span>
+                <img src="pictures/img2_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 3</span>
+                <img src="pictures/img3_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 4</span>
+                <img src="pictures/img4_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 5</span>
+                <img src="pictures/img5_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 6</span>
+                <img src="pictures/img6_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 7</span>
+                <img src="pictures/img7_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 8</span>
+                <img src="pictures/img8_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 9</span>
+                <img src="pictures/img9_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 10</span>
+                <img src="pictures/img10_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 11</span>
+                <img src="pictures/img11_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 12</span>
+                <img src="pictures/img12_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 13</span>
+                <img src="pictures/img13_sml.jpg">
+            </div>
+            <div class="imgformat">
+                <span>Art 14</span>
+                <img src="pictures/img14_sml.jpg">
+            </div>
+        </div>
+        <h1 style="grid-area:footer; margin: 50px 0px 0px 0px;"></h1>
+    </div>
+</body>
+</html>
